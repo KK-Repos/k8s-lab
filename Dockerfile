@@ -1,6 +1,8 @@
 FROM node:slim
 COPY . /addAPI
 WORKDIR /addAPI
+ARG PORT
+ENV PORT=${PORT}}
 RUN npm i
-EXPOSE 3000
+EXPOSE ${PORT}
 CMD ["npm", "run", "start"]
