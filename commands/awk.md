@@ -1,0 +1,1 @@
+Awk is a powerful text processing and pattern scanning language typically used in Unix-like operating systems.
