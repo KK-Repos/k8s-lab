@@ -12,3 +12,4 @@ spec:
     protocol: TCP
   selector:
     app: hello-world
+    # Service is looking for Pods with the label `app=hello-world`
