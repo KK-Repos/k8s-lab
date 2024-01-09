@@ -18,3 +18,13 @@ fi
 if test $NAME == "test1";then
     echo "macthing through test fn"
 fi
+
+
+#Before creating directory checking already exists or not
+
+filePath=$(pwd)/scripts
+echo "filePath: $filePath"
+
+if [[ -d $filePath ]];then
+    echo "directory exist
+fi
