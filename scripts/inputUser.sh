@@ -1,7 +1,7 @@
 #! bin/bash
 
-echo "Enter you name"
-read name
+# -s => hide the input
+read -p "Enter you name:" name
 echo "Your name is $name"
 
 #Arguments
