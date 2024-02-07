@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-deploy
+  namespace: kk-test
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: hello-world
@@ -20,6 +21,6 @@ spec:
     spec:
       containers:
       - name: hello-pod
-        image: nigelpoulton/k8sbook:latest
+        image: nigelpoulton/k8sbook:edge
         ports:
         - containerPort: 8080
