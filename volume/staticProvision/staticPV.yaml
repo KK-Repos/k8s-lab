@@ -1,0 +1,15 @@
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage  # Reference to the storage name
+  hostPath:
+    path: /mnt/disks/ssd1  # Ensure this path exists on the node
+

@@ -1,0 +1,13 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: azure-disk-kk-sc
+provisioner: disk.csi.azure.com  # Use the Azure Disk CSI driver
+parameters:
+  skuname: StandardSSD_LRS  # Options: StandardSSD_LRS, Premium_LRS, Standard_LRS
+  storageaccounttype: StandardSSD_LRS
+  kind: Managed  # Specifies a managed disk
+  cachingmode: ReadWrite  # Options: None, ReadOnly, ReadWrite
+reclaimPolicy: Delete  # Options: Retain, Delete
+volumeBindingMode: WaitForFirstConsumer  # Options: Immediate, WaitForFirstConsumer
+allowVolumeExpansion: true
