@@ -16,3 +16,4 @@ app.get('/add', function(req, res) {
 
 app.listen(PORT);
 console.log(`Server started on port ${PORT}`);
+console.log("[SAMPLE] add?firstNumber=10&secondNumber=3")

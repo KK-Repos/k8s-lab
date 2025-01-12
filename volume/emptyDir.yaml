@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-example-pod
+  namespace: kk-test
+spec:
+  containers:
+  - name: app-container
+    image: klentytest.azurecr.io/kksample:latest
+    command: [ "sh", "-c", "cat /data/hello.txt && sleep 3600" ]
+    volumeMounts:
+    - name: shared-volume
+      mountPath: /data
+  volumes:
+  - name: shared-volume
+    emptyDir: {}

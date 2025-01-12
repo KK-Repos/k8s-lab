@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: special-pod
+  # namespace: kk-test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  tolerations:
+  - key: "special"
+    operator: "Equal"
+    value: "workload"
+    effect: "NoSchedule"
