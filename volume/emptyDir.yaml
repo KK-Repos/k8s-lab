@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: app-container
-    image: klentytest.azurecr.io/kksample:latest
+    image: kktest.azurecr.io/kksample:latest
     command: [ "sh", "-c", "cat /data/hello.txt && sleep 3600" ]
     volumeMounts:
     - name: shared-volume
