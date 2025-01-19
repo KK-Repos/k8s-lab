@@ -8,6 +8,7 @@ app.get('/add', function(req, res) {
   const secondNumber = Number(req.query.secondNumber);
 
   const sum = firstNumber + secondNumber;
+  console.log("[sum]",sum)
 
   res.send({
     sum:sum
@@ -15,5 +16,6 @@ app.get('/add', function(req, res) {
 });
 
 app.listen(PORT);
+console.log("SECRET VALUE : ", process.env.PASSWORD)
 console.log(`Server started on port ${PORT}`);
-console.log("[SAMPLE] add?firstNumber=10&secondNumber=3")
+console.log("[SAMPLE] /add?firstNumber=10&secondNumber=3")
